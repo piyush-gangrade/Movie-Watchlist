@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Search</title>
+</head>
+<body>
+
+    <header id="header">
+        <h1 class="main-heading">Find your film</h1>
+        <a class="page-link" id="watchlist" href="./watchlist.html">My Watchlist</a>
+    </header>
+
+    <div id="search-bar">
+        <img src="assist/search-logo.png" alt="search icon">
+        <input type="text" id="input-title" placeholder="Search for a movie">
+        <button class="search-btn" id="search">Search</button>
+    </div>
+
+    <div id="movies-section">
+        <div class="movies-other-details">
+            <img src="assist/cinema-reel.png" alt="File roll icon">
+            <p class="movie-info">Start exploring</p>
+        </div>
+        <!-- <div class="movie-details">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Blade Runner Poster">
+                <div>
+                    <div class="movie-header">
+                        <h1>Blade Runner</h1>
+                        <span>⭐ 8.1</span>
+                    </div>
+                    <div class="movie-content">
+                        <span>117 min</span>
+                        <span>Action, Drama, Sci-fi</span>
+                        <div class="watchlist-added">
+                            <img class="add-to-watchlist" src="assist/add-circle.png" alt="add movie to watchlist">
+                            <button class="add-to-watchlist">Watchlist</button>
+                        </div>
+                    </div>
+                    <p class="movie-plot" >A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.</p> 
+                </div> 
+            </div> -->
+    </div>
+    <script src="server.js" type="module"></script>
+</body>
+</html>

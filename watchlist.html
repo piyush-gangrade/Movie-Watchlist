@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Search</title>
+</head>
+<body>
+
+    <header id="header">
+        <h1 class="main-heading">My Watchlist</h1>
+        <a class="page-link" href="./index.html">Search for movies</a>
+    </header>
+
+
+    <div id="watchlist-section">
+        <!-- <div class="movies-other-details">
+            <p class="movie-info">Your watchlist is looking a little empty..</p>
+        </div> -->
+    </div>
+    <script >
+        const watchlistMovies = JSON.parse(localStorage.getItem("watchlist"))
+        console.log(watchlistMovies)
+                if(watchlistMovies.length > 0){
+                for(let movie of watchlistMovies.reverse()){
+                    let divEl = document.createElement("div");
+                    let html = ``;
+                    html = `
+                                <div class="movie-details">
+                                    <img src="${movie.poster}" alt="${movie.title} Poster">
+                                    <div>
+                                        <div class="movie-header">
+                                            <h1>${movie.title}</h1>
+                                            <span>⭐ ${movie.rating}</span>
+                                        </div>
+                                        <div class="movie-content">
+                                            <span>${movie.runtime}</span>
+                                            <span>${movie.genre}</span>
+                                            <div class="watchlist-added">
+                                                <img id="img${movie.id}" class="remove-to-watchlist" src="assist/minus-circle.png" alt="add movie to watchlist">
+                                                <button id="${movie.id}" class="remove-to-watchlist">Remove</button>
+                                            </div>
+                                        </div>
+                                            <p class="movieData-plot" >${movie.plot}</p> 
+                                    </div> 
+                                </div>
+                            `;
+                    divEl.innerHTML = html;
+                    document.getElementById("watchlist-section").append(divEl);
+                }
+            }
+            else{
+                document.getElementById("watchlist-section").innerHTML = `<div class="movies-other-details">
+                <p class="movie-info">Your watchlist is looking a little empty..</p>
+            </div>`;
+            }
+
+    document.getElementById("watchlist-section").addEventListener("click", (e)=>{
+        if(e.target.className === "remove-to-watchlist"){
+            for(let movie of watchlistMovies){
+            if(movie.id === event.target.id || ("img"+movie.id) === event.target.id)
+                {
+                    const newWatchlist = watchlistMovies.filter(ele => ele !==movie)
+                    console.log(newWatchlist)
+                    localStorage.setItem("watchlist", JSON.stringify(newWatchlist));
+                    location.reload();
+                }
+            } 
+        }
+    })
+    </script>
+</body>
+</html>
