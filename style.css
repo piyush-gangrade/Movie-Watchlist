@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    color: #FFFFFF;
+    background: linear-gradient(#1A1919,#666666);
+    display: flex;
+    justify-content: space-around;
+    height: 30vh;
+    align-items: center;
+    background-size: contain,cover;
+    background-repeat: no-repeat;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+}
+
+.page-link{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+button{
+    border: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: unset;
+}
+
+div#search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -16px auto;
+    width: 40vw;
+    border: 3px solid #D1D5DB;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+}
+
+div#search-bar > img {
+    width: 30px;
+}
+
+#input-title{
+    width: 68%;
+    border: none;
+    margin: 8px 5px;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.search-btn{
+    width: 25%;
+    background: #D1D5DB;
+    padding: 8px 3px;
+    color: #374151;
+
+}
+
+/*delaits other than movies*/
+.movies-other-details{
+    margin: 170px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movies-other-details > img{
+    width: 70px;
+}
+/*message before search or not-found or empty watchlist */
+.movie-info{
+    color: #6E6E6E;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 5px;
+    width: 25%;
+    text-align: center;
+
+}
+/*after search movie section*/
+.movie-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px;
+    border-bottom: 2px solid #E5E7EE;
+    margin: 60px auto;
+    width: 50vw;
+}
+
+.movie-details > img{
+    width: 20%;
+    height: 40%;
+}
+.movie-details > div{
+    width: 75%;
+}
+.movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-header > h1{
+    margin: 10px 10px 20px 0px;
+    font-weight: normal;
+}
+
+.movie-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.watchlist-added{
+    display: flex;
+    align-items: center;
+}
+.watchlist-added button{
+    color: #000000;
+    letter-spacing: 1px;
+    width: 40px;
+    transition: 0.5s ease-out;
+}
+.add-to-watchlist:first-child{
+width: 20px;
+}
+.add-to-watchlist:last-child:hover{
+    color: #067104;
+    font-weight: bold;
+}
+.add-to-watchlist{
+    cursor: pointer;
+}
+
+.movie-plot{
+    width: 500px;
+    height: 120px;
+    font-size: 1.3rem;
+    resize: none;
+    border: none;
+    margin-top: 20px;
+    color: #6B7280;
+}
+
+.remove-to-watchlist:first-child{
+    background-color: #000000;
+    border-radius: 50%;
+    padding: 2px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.remove-to-watchlist:hover{
+    color: #E71328;
+    font-weight: bold;
+}
