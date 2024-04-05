@@ -1,10 +1,10 @@
 const search = document.getElementById("search");
 const inputTitle = document.getElementById("input-title");
-const movieInfo = document.getElementById("movie-info");
 const movieSection = document.getElementById("movies-section");
 
 let watchlistMovies = JSON.parse(localStorage.getItem("watchlist")) || [];
 let movieArr = [];
+let API_KEY = "";
 
 search.addEventListener("click", searchMovies)
 movieSection.addEventListener("click",(e)=>addMoviesToWatchlish(e));
@@ -12,7 +12,7 @@ movieSection.addEventListener("click",(e)=>addMoviesToWatchlish(e));
 async function searchMovies(){
     const title = inputTitle.value;
     try{
-        const res = await fetch(`http://www.omdbapi.com/?apikey=1b3d9fe9&s=${title}]`);
+        const res = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}]`);
         if(!res.ok){
             throw Error("Movie is found.");
         }
