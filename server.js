@@ -12,7 +12,7 @@ movieSection.addEventListener("click",(e)=>addMoviesToWatchlish(e));
 async function searchMovies(){
     const title = inputTitle.value;
     try{
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}]`);
+        const res = await fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${title}]`);
         if(!res.ok){
             throw Error("Movie is found.");
         }
